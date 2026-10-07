@@ -73,14 +73,14 @@
 
     /* Hero Section */
     .hero {
-      min-height: 85vh;
+      min-height: 90vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
       padding: 8rem 1rem 4rem;
-      background: radial-gradient(circle at center, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+      background: radial-gradient(circle at center, rgba(59, 130, 246, 0.18) 0%, transparent 70%);
     }
 
     .hero-badge {
@@ -99,13 +99,37 @@
     .hero h1 {
       font-size: 3.5rem;
       font-weight: 800;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
 
     .hero h1 span {
       background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+    }
+
+    /* Animated Dynamic Subtitle */
+    .hero-typing {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      margin-bottom: 1.5rem;
+      height: 2.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .typed-text {
+      border-right: 3px solid var(--accent-cyan);
+      animation: blink 0.75s step-end infinite;
+      padding-right: 4px;
+    }
+
+    @keyframes blink {
+      from, to { border-color: transparent; }
+      50% { border-color: var(--accent-cyan); }
     }
 
     .hero p {
@@ -118,6 +142,8 @@
     .hero-btns {
       display: flex;
       gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .btn {
@@ -128,7 +154,7 @@
       transition: all 0.3s ease;
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.6rem;
     }
 
     .btn-primary {
@@ -214,7 +240,7 @@
       gap: 0.3rem;
     }
 
-    /* Technical Skills Bars */
+    /* Technical Skills */
     .skills-analytics {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -339,7 +365,7 @@
       border-radius: 16px;
       padding: 3rem;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2rem;
     }
 
@@ -388,6 +414,7 @@
 
     @media (max-width: 768px) {
       .hero h1 { font-size: 2.3rem; }
+      .hero-typing { font-size: 1.3rem; }
       nav { display: none; }
     }
   </style>
@@ -406,57 +433,65 @@
     </nav>
   </header>
 
-  <!-- Hero -->
+  <!-- Hero Section -->
   <section class="hero" id="about">
     <div class="hero-badge">Data Analytics & Business Intelligence</div>
     <h1>Hi, I'm <span>Asmaa Gamal</span></h1>
+    
+    <!-- Animated Typing Effect -->
+    <div class="hero-typing">
+      <span>I am a </span>
+      <span class="typed-text" id="typed-text"></span>
+    </div>
+
     <p>
-      Telemarketing Team Leader & Senior Data Analyst specializing in Power BI dashboards, SQL Server modeling, Python EDA, and converting business requirements into actionable executive insights.
+      Highly analytical Data Analyst specialized in Power BI dashboards, SQL Server modeling, Python EDA, and transforming complex datasets into actionable executive decision-making tools.
     </p>
+
     <div class="hero-btns">
       <a href="#projects" class="btn btn-primary"><i class="fas fa-chart-line"></i> View Projects</a>
-      <a href="#contact" class="btn btn-secondary"><i class="fas fa-paper-plane"></i> Contact Me</a>
+      <a href="https://wa.me/201021386251" target="_blank" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
     </div>
   </section>
 
   <!-- Real-time KPIs -->
   <section class="section" id="metrics">
-    <h2 class="section-title">Analytical Performance Impact</h2>
-    <p class="section-subtitle">Key metrics & project execution summary</p>
+    <h2 class="section-title">Analytical Impact & Achievements</h2>
+    <p class="section-subtitle">Key metrics & business intelligence execution</p>
     
     <div class="kpi-grid">
       <div class="kpi-card">
-        <div class="kpi-title">Processed Dataset Records</div>
+        <div class="kpi-title">Processed Records</div>
         <div class="kpi-value">1.5M+</div>
-        <div class="kpi-trend"><i class="fas fa-check-circle"></i> ETL & Cleaning</div>
+        <div class="kpi-trend"><i class="fas fa-check-circle"></i> ETL & Power Query</div>
       </div>
       <div class="kpi-card">
-        <div class="kpi-title">Interactive BI Dashboards</div>
+        <div class="kpi-title">BI Dashboards</div>
         <div class="kpi-value">25+</div>
         <div class="kpi-trend"><i class="fas fa-chart-bar"></i> Power BI & Excel</div>
       </div>
       <div class="kpi-card">
-        <div class="kpi-title">Data Accuracy Standard</div>
+        <div class="kpi-title">Data Precision Rate</div>
         <div class="kpi-value">99.5%</div>
         <div class="kpi-trend"><i class="fas fa-shield-alt"></i> Quality Validation</div>
       </div>
       <div class="kpi-card">
-        <div class="kpi-title">Efficiency Improvement</div>
+        <div class="kpi-title">Automation Efficiency</div>
         <div class="kpi-value">+45%</div>
-        <div class="kpi-trend"><i class="fas fa-bolt"></i> Automated DAX / SQL</div>
+        <div class="kpi-trend"><i class="fas fa-bolt"></i> Optimized DAX & SQL</div>
       </div>
     </div>
   </section>
 
-  <!-- Skills Progress -->
+  <!-- Skills Section -->
   <section class="section" id="skills">
     <h2 class="section-title">Technical Expertise</h2>
-    <p class="section-subtitle">Core capabilities and tool stack</p>
+    <p class="section-subtitle">Core analytical stack & tools</p>
     
     <div class="skills-analytics">
       <div class="skill-bar-item">
         <div class="skill-info">
-          <span>Power BI & DAX Modeling</span>
+          <span><i class="fas fa-chart-pie" style="color: #06b6d4;"></i> Power BI & DAX Modeling</span>
           <span>95%</span>
         </div>
         <div class="progress-line"><span style="width: 95%;"></span></div>
@@ -464,7 +499,7 @@
       
       <div class="skill-bar-item">
         <div class="skill-info">
-          <span>SQL Server (T-SQL / Joins / CTEs)</span>
+          <span><i class="fas fa-database" style="color: #3b82f6;"></i> SQL Server (T-SQL / CTEs / Joins)</span>
           <span>90%</span>
         </div>
         <div class="progress-line"><span style="width: 90%;"></span></div>
@@ -472,7 +507,7 @@
 
       <div class="skill-bar-item">
         <div class="skill-info">
-          <span>Advanced Excel & Power Query</span>
+          <span><i class="fas fa-file-excel" style="color: #10b981;"></i> Advanced Excel & Power Query</span>
           <span>95%</span>
         </div>
         <div class="progress-line"><span style="width: 95%;"></span></div>
@@ -480,7 +515,7 @@
 
       <div class="skill-bar-item">
         <div class="skill-info">
-          <span>Python (Pandas / Seaborn EDA)</span>
+          <span><i class="fab fa-python" style="color: #f59e0b;"></i> Python (Pandas / Seaborn EDA)</span>
           <span>85%</span>
         </div>
         <div class="progress-line"><span style="width: 85%;"></span></div>
@@ -488,17 +523,17 @@
     </div>
   </section>
 
-  <!-- Projects Showcase -->
+  <!-- Projects Section -->
   <section class="section" id="projects">
-    <h2 class="section-title">Featured Projects & Dashboards</h2>
-    <p class="section-subtitle">Real-world data modeling and interactive visual analytics</p>
+    <h2 class="section-title">Featured Analytics Projects</h2>
+    <p class="section-subtitle">Interactive dashboards and statistical data analysis</p>
 
     <div class="projects-grid">
 
-      <!-- Project 1: Sales Performance Analytics -->
+      <!-- Project 1: Superstore Sales -->
       <div class="project-card">
         <div class="project-img-wrapper">
-          <img src="https://raw.githubusercontent.com/asmaagamalabdrabo-bot/SALES-PERFORMANCE-ANALYTICS/main/Picture2%20-%20Sales.png" alt="Superstore Sales Dashboard" class="project-img"/>
+          <img src="https://raw.githubusercontent.com/asmaagamalabdrabo-bot/SALES-PERFORMANCE-ANALYTICS/main/Picture2%20-%20Sales.png" alt="Superstore Sales Performance Analytics" class="project-img"/>
         </div>
         <div class="project-content">
           <div class="project-tags">
@@ -507,7 +542,7 @@
             <span class="tag">Sales Analytics</span>
           </div>
           <h3 class="project-title">Superstore Sales Performance Analytics</h3>
-          <p class="project-desc">Interactive dashboard tracking global sales revenue, profit margins, regional sub-category performance, and annual order growth.</p>
+          <p class="project-desc">Interactive executive dashboard analyzing profit margins, regional trends, sub-category KPIs, and annual order growth.</p>
           <div class="project-links">
             <a href="https://github.com/asmaagamalabdrabo-bot/SALES-PERFORMANCE-ANALYTICS" target="_blank" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size:0.85rem;"><i class="fab fa-github"></i> View Repository</a>
           </div>
@@ -526,7 +561,7 @@
             <span class="tag">Financial Trends</span>
           </div>
           <h3 class="project-title">IMDb Top 250 Movies Analysis</h3>
-          <p class="project-desc">Interactive dashboard evaluating box office gross, user ratings, genre breakdown, and financial trends across top cinema hits.</p>
+          <p class="project-desc">In-depth cinematic analytics evaluating box office revenue, audience ratings, genres, and director impacts.</p>
           <div class="project-links">
             <a href="https://github.com/asmaagamalabdrabo-bot/IMDb-Top-250-Movies-Analysis" target="_blank" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size:0.85rem;"><i class="fab fa-github"></i> View Repository</a>
           </div>
@@ -542,10 +577,10 @@
           <div class="project-tags">
             <span class="tag">SQL Server</span>
             <span class="tag">Python</span>
-            <span class="tag">Customer Retention</span>
+            <span class="tag">Retention Analysis</span>
           </div>
           <h3 class="project-title">Customer Churn Analytics & Retention</h3>
-          <p class="project-desc">In-depth behavioral analysis identifying churn factors, customer tenure trends, and risk segmentation for subscription services.</p>
+          <p class="project-desc">Customer segmentation model identifying retention patterns, churn risk factors, and lifetime value insights.</p>
           <div class="project-links">
             <a href="https://github.com/asmaagamalabdrabo-bot/customer_churn_dataset-training-master" target="_blank" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size:0.85rem;"><i class="fab fa-github"></i> View Repository</a>
           </div>
@@ -558,22 +593,22 @@
   <!-- Contact Section -->
   <section class="section" id="contact">
     <h2 class="section-title">Get In Touch</h2>
-    <p class="section-subtitle">Let's discuss data analysis, business intelligence, and insights</p>
+    <p class="section-subtitle">Available for Data Analytics & BI Consultancy Opportunities</p>
 
     <div class="contact-container">
       <div class="contact-item">
         <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
         <div class="contact-details">
-          <h4>Phone / WhatsApp</h4>
-          <p><a href="https://wa.me/201021386251" target="_blank">+20 102 138 6251</a></p>
+          <h4>Phone Number</h4>
+          <p><a href="tel:+201021386251">+20 102 138 6251</a></p>
         </div>
       </div>
 
       <div class="contact-item">
-        <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+        <div class="contact-icon" style="border-color: #25d366; color: #25d366;"><i class="fab fa-whatsapp"></i></div>
         <div class="contact-details">
-          <h4>LinkedIn</h4>
-          <p><a href="https://linkedin.com" target="_blank">Asmaa Gamal</a></p>
+          <h4>WhatsApp Direct</h4>
+          <p><a href="https://wa.me/201021386251" target="_blank">+20 102 138 6251</a></p>
         </div>
       </div>
 
@@ -590,6 +625,60 @@
   <footer>
     <p>&copy; 2026 Asmaa Gamal. All rights reserved.</p>
   </footer>
+
+  <!-- Script for Dynamic Typing Effect -->
+  <script>
+    const phrases = [
+      "Power BI Specialist",
+      "Senior Data Analyst",
+      "SQL Database Developer",
+      "BI Dashboard Designer"
+    ];
+    let i = 0;
+    let j = 0;
+    let currentPhrase = [];
+    let isDeleting = false;
+    let isEnd = false;
+
+    function loop() {
+      isEnd = false;
+      const typedElement = document.getElementById("typed-text");
+      
+      if (i < phrases.length) {
+        if (!isDeleting && j <= phrases[i].length) {
+          currentPhrase.push(phrases[i][j]);
+          j++;
+          typedElement.innerHTML = currentPhrase.join("");
+        }
+
+        if (isDeleting && j <= phrases[i].length) {
+          currentPhrase.pop();
+          j--;
+          typedElement.innerHTML = currentPhrase.join("");
+        }
+
+        if (j == phrases[i].length) {
+          isEnd = true;
+          isDeleting = true;
+        }
+
+        if (isDeleting && j === 0) {
+          currentPhrase = [];
+          isDeleting = false;
+          i++;
+          if (i === phrases.length) {
+            i = 0;
+          }
+        }
+      }
+      const speed = isEnd ? 2000 : isDeleting ? 50 : 100;
+      setTimeout(loop, speed);
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      loop();
+    });
+  </script>
 
 </body>
 </html>
