@@ -104,4 +104,492 @@
 
     .hero h1 span {
       background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
-      -webkit-background-
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      max-width: 750px;
+      color: var(--text-muted);
+      font-size: 1.15rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .btn {
+      padding: 0.8rem 1.8rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent-blue), #2563eb);
+      color: #fff;
+      box-shadow: 0 4px 15px var(--accent-glow);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-main);
+      border: 1px solid var(--border-color);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+    }
+
+    /* Section Layouts */
+    .section {
+      padding: 4.5rem 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--text-muted);
+      margin-bottom: 3.5rem;
+    }
+
+    /* Key Performance Indicators Grid */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .kpi-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .kpi-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-blue);
+    }
+
+    .kpi-title {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    .kpi-value {
+      font-size: 2rem;
+      font-weight: 800;
+      margin: 0.5rem 0;
+      color: var(--accent-cyan);
+    }
+
+    .kpi-trend {
+      font-size: 0.8rem;
+      color: #10b981;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    /* Technical Skills Bars */
+    .skills-analytics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 2.5rem;
+    }
+
+    .skill-bar-item {
+      margin-bottom: 1rem;
+    }
+
+    .skill-info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .progress-line {
+      height: 10px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .progress-line span {
+      height: 100%;
+      display: block;
+      background: linear-gradient(90deg, var(--accent-blue), var(--accent-cyan));
+      border-radius: 10px;
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card:hover {
+      border-color: var(--accent-cyan);
+      box-shadow: 0 10px 30px rgba(6, 182, 212, 0.15);
+      transform: translateY(-5px);
+    }
+
+    .project-img-wrapper {
+      width: 100%;
+      height: 220px;
+      overflow: hidden;
+      background: #1e293b;
+      position: relative;
+    }
+
+    .project-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .project-card:hover .project-img {
+      transform: scale(1.05);
+    }
+
+    .project-content {
+      padding: 1.5rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-tags {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      background: rgba(59, 130, 246, 0.15);
+      color: var(--accent-cyan);
+      font-size: 0.75rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .project-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-desc {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-links {
+      margin-top: auto;
+    }
+
+    /* Contact Section */
+    .contact-container {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 3rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
+
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: rgba(59, 130, 246, 0.1);
+      border: 1px solid var(--accent-blue);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-cyan);
+      font-size: 1.3rem;
+    }
+
+    .contact-details h4 {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .contact-details p, .contact-details a {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-main);
+      text-decoration: none;
+    }
+
+    .contact-details a:hover {
+      color: var(--accent-cyan);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-color);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.3rem; }
+      nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="logo">AG.</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#metrics">Metrics</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="about">
+    <div class="hero-badge">Data Analytics & Business Intelligence</div>
+    <h1>Hi, I'm <span>Asmaa Gamal</span></h1>
+    <p>
+      Telemarketing Team Leader & Senior Data Analyst specializing in Power BI dashboards, SQL Server modeling, Python EDA, and converting business requirements into actionable executive insights.
+    </p>
+    <div class="hero-btns">
+      <a href="#projects" class="btn btn-primary"><i class="fas fa-chart-line"></i> View Projects</a>
+      <a href="#contact" class="btn btn-secondary"><i class="fas fa-paper-plane"></i> Contact Me</a>
+    </div>
+  </section>
+
+  <!-- Real-time KPIs -->
+  <section class="section" id="metrics">
+    <h2 class="section-title">Analytical Performance Impact</h2>
+    <p class="section-subtitle">Key metrics & project execution summary</p>
+    
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-title">Processed Dataset Records</div>
+        <div class="kpi-value">1.5M+</div>
+        <div class="kpi-trend"><i class="fas fa-check-circle"></i> ETL & Cleaning</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-title">Interactive BI Dashboards</div>
+        <div class="kpi-value">25+</div>
+        <div class="kpi-trend"><i class="fas fa-chart-bar"></i> Power BI & Excel</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-title">Data Accuracy Standard</div>
+        <div class="kpi-value">99.5%</div>
+        <div class="kpi-trend"><i class="fas fa-shield-alt"></i> Quality Validation</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-title">Efficiency Improvement</div>
+        <div class="kpi-value">+45%</div>
+        <div class="kpi-trend"><i class="fas fa-bolt"></i> Automated DAX / SQL</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Progress -->
+  <section class="section" id="skills">
+    <h2 class="section-title">Technical Expertise</h2>
+    <p class="section-subtitle">Core capabilities and tool stack</p>
+    
+    <div class="skills-analytics">
+      <div class="skill-bar-item">
+        <div class="skill-info">
+          <span>Power BI & DAX Modeling</span>
+          <span>95%</span>
+        </div>
+        <div class="progress-line"><span style="width: 95%;"></span></div>
+      </div>
+      
+      <div class="skill-bar-item">
+        <div class="skill-info">
+          <span>SQL Server (T-SQL / Joins / CTEs)</span>
+          <span>90%</span>
+        </div>
+        <div class="progress-line"><span style="width: 90%;"></span></div>
+      </div>
+
+      <div class="skill-bar-item">
+        <div class="skill-info">
+          <span>Advanced Excel & Power Query</span>
+          <span>95%</span>
+        </div>
+        <div class="progress-line"><span style="width: 95%;"></span></div>
+      </div>
+
+      <div class="skill-bar-item">
+        <div class="skill-info">
+          <span>Python (Pandas / Seaborn EDA)</span>
+          <span>85%</span>
+        </div>
+        <div class="progress-line"><span style="width: 85%;"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Showcase -->
+  <section class="section" id="projects">
+    <h2 class="section-title">Featured Projects & Dashboards</h2>
+    <p class="section-subtitle">Real-world data modeling and interactive visual analytics</p>
+
+    <div class="projects-grid">
+
+      <!-- Project 1: Sales Performance Analytics -->
+      <div class="project-card">
+        <div class="project-img-wrapper">
+          <img src="https://raw.githubusercontent.com/asmaagamalabdrabo-bot/SALES-PERFORMANCE-ANALYTICS/main/Picture2%20-%20Sales.png" alt="Superstore Sales Dashboard" class="project-img"/>
+        </div>
+        <div class="project-content">
+          <div class="project-tags">
+            <span class="tag">Power BI</span>
+            <span class="tag">DAX Measures</span>
+            <span class="tag">Sales Analytics</span>
+          </div>
+          <h3 class="project-title">Superstore Sales Performance Analytics</h3>
+          <p class="project-desc">Interactive dashboard tracking global sales revenue, profit margins, regional sub-category performance, and annual order growth.</p>
+          <div class="project-links">
+            <a href="https://github.com/asmaagamalabdrabo-bot/SALES-PERFORMANCE-ANALYTICS" target="_blank" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size:0.85rem;"><i class="fab fa-github"></i> View Repository</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: IMDb Top 250 Movies Analysis -->
+      <div class="project-card">
+        <div class="project-img-wrapper">
+          <img src="https://raw.githubusercontent.com/asmaagamalabdrabo-bot/IMDb-Top-250-Movies-Analysis/main/WhatsApp%20Image%202026-09-28%20at%203.25.54%20PM.jpg" alt="IMDb Top 250 Movies Analysis" class="project-img"/>
+        </div>
+        <div class="project-content">
+          <div class="project-tags">
+            <span class="tag">Power BI</span>
+            <span class="tag">Data Storytelling</span>
+            <span class="tag">Financial Trends</span>
+          </div>
+          <h3 class="project-title">IMDb Top 250 Movies Analysis</h3>
+          <p class="project-desc">Interactive dashboard evaluating box office gross, user ratings, genre breakdown, and financial trends across top cinema hits.</p>
+          <div class="project-links">
+            <a href="https://github.com/asmaagamalabdrabo-bot/IMDb-Top-250-Movies-Analysis" target="_blank" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size:0.85rem;"><i class="fab fa-github"></i> View Repository</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3: Customer Churn Analysis -->
+      <div class="project-card">
+        <div class="project-img-wrapper">
+          <img src="https://via.placeholder.com/600x350/13192e/06b6d4?text=Customer+Churn+Analytics+Dashboard" alt="Customer Churn Analysis" class="project-img"/>
+        </div>
+        <div class="project-content">
+          <div class="project-tags">
+            <span class="tag">SQL Server</span>
+            <span class="tag">Python</span>
+            <span class="tag">Customer Retention</span>
+          </div>
+          <h3 class="project-title">Customer Churn Analytics & Retention</h3>
+          <p class="project-desc">In-depth behavioral analysis identifying churn factors, customer tenure trends, and risk segmentation for subscription services.</p>
+          <div class="project-links">
+            <a href="https://github.com/asmaagamalabdrabo-bot/customer_churn_dataset-training-master" target="_blank" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size:0.85rem;"><i class="fab fa-github"></i> View Repository</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <h2 class="section-title">Get In Touch</h2>
+    <p class="section-subtitle">Let's discuss data analysis, business intelligence, and insights</p>
+
+    <div class="contact-container">
+      <div class="contact-item">
+        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+        <div class="contact-details">
+          <h4>Phone / WhatsApp</h4>
+          <p><a href="https://wa.me/201021386251" target="_blank">+20 102 138 6251</a></p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+        <div class="contact-details">
+          <h4>LinkedIn</h4>
+          <p><a href="https://linkedin.com" target="_blank">Asmaa Gamal</a></p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon"><i class="fab fa-github"></i></div>
+        <div class="contact-details">
+          <h4>GitHub Profile</h4>
+          <p><a href="https://github.com/asmaagamalabdrabo-bot" target="_blank">asmaagamalabdrabo-bot</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Asmaa Gamal. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
